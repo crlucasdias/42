@@ -1,0 +1,103 @@
+/*
+
+
+Users:
+
+Cadastro 
+Alterar dados
+
+Email:
+
+Notificacao de comentarios
+Esqueceu senha
+Ativar conta
+
+Main Page:
+
+Imagens
+- Notificacao pro author
+- Comentario
+
+
+
+DB:
+
+
+Users {
+	id
+	name
+	email
+	password
+	token
+	token_validate
+}
+
+Posts {
+	id
+	user_id
+	image
+	likes
+}
+
+Comments {
+	id
+	Author name
+	date
+	comment
+}
+
+
+camagru42
+
+*/
+
+
+Notas:
+
+### Usuario ###
+
+Ok:
+
+- cadastro - ok
+- login - ok
+- Aviso ajax - ok
+- Liberar login por username - ok
+- Notifications no DB (add) - ok
+- Update datas - ok
+- Activate account - ok
+- New comment notification - ok 
+- Forgot Password - ok
+- Melhorar design - ok
+- Toggle responsivo - ok
+- Link botao login e registro - ok
+- Galeria pra add photo ao inves da pagina inicial - ok
+- Imagem Webcam - ok
+- Obrigar imagem sobreposta - ok
+- Passar tudo pro folder debaixo - ok
+-------
+
+Pagina inicial:
+
+Like e deslike - ok
+Remover foto - ok 
+Add comentario - ok
+Listar comentarios - ok
+Paginar pagina inicial - ok
+Design - Ok
+Testar tudo - ok
+Setup.php - ok
+
+
+------
+
+Bonus:
+
+- Ajax
+- Gif
+- Deslike
+- Name comment
+- nome no topo
+- Preview
+
+
+// checar por senha bugado filho da puta

@@ -1,0 +1,12 @@
+Data management options:
+
+TODO:
+1. Refresh cart when item is edited
+2. Fix cart categories
+3. Save cart to user
+4. add "item id" to each item
+	4b. make sure "item id" stays correct when delete item
+	4c. enable deletion of items
+
+5. double check everything
+

@@ -1,0 +1,1 @@
+SELECT COUNT(*) as movies FROM member_history WHERE date BETWEEN '2006-10-30' AND '2006-12-23' OR date BETWEEN '2006-12-25' AND '2007-07-27' OR date LIKE "%-12-24%";

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ballon</title>
+	<style>
+		.ballon {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="ballon red" color-v="1"> </div>
+<script>
+function isBallonSizeOk(width, height)
+{
+	if(width > 420 || height > 420)
+		return(0);
+	else if(width < 200 || height < 200)
+		return(0);
+	return (1);
+}
+
+function handleClass(item, toRemove, toAdd)
+{
+	item.classList.remove(toRemove);
+	item.classList.add(toAdd);
+}
+
+function handleColorClick(ballon)
+{
+	const currentColor = ballon.getAttribute("color-v");
+	console.log(currentColor);
+	switch(currentColor)
+	{
+		case "1":  //current = red
+			handleClass(ballon, 'red','green');
+			ballon.setAttribute("color-v", "2");
+			break;
+		case "2":
+			handleClass(ballon, 'green','blue');
+			ballon.setAttribute("color-v", "3");
+			break;
+		case "3":
+			handleClass(ballon, 'blue','red');
+			ballon.setAttribute("color-v", "1");
+			break;
+		default:
+			handleClass(ballon, 'red','red');
+			ballon.setAttribute("color-v", "1");
+			break;
+	}
+}
+
+function handleColorHover(ballon)
+{
+	//red green blue
+	//blue green red
+	const currentColor = ballon.getAttribute("color-v");
+	
+	switch(currentColor)
+	{
+		case "1": 
+			handleClass(ballon, 'red','blue');
+			ballon.setAttribute("color-v", "3");
+			break;
+		case "2":
+			handleClass(ballon, 'green','red');
+			ballon.setAttribute("color-v", "1");
+			break;
+		case "3":
+			handleClass(ballon, 'blue','green');
+			ballon.setAttribute("color-v", "2");
+			break;
+		default:
+			handleClass(ballon, 'red','red');
+			ballon.setAttribute("color-v", "1");
+			break;
+	}
+}
+
+function backToDefault(ballon)
+{
+	ballon.style.width =  "200px";
+	ballon.style.height = "200px";
+}
+
+function handleBallon(ballon, type)
+{
+	let width = ballon.offsetWidth;
+	let height = ballon.offsetHeight;
+	if(isBallonSizeOk(width, height))
+	{
+		if(type == "click")
+		{
+			if(isBallonSizeOk(width + 10, height + 10))
+			{
+				ballon.style.width =  `${width + 10}px`;
+				ballon.style.height = `${height + 10}px`;
+				handleColorClick(ballon);
+			}
+			else
+			{
+				backToDefault(ballon);
+				handleColorClick(ballon);
+			}
+		}
+		else if(type == "mouseout")
+		{
+			if(isBallonSizeOk(width - 5, height - 5))
+			{
+				ballon.style.width =  `${width - 5}px`;
+				ballon.style.height = `${height - 5}px`;
+				handleColorHover(ballon);
+			}
+			else
+			{
+				backToDefault(ballon);
+				handleColorHover(ballon);
+			}	
+		}
+	}
+	else
+		backToDefault(ballon);
+}
+
+window.onload = function(e)
+{
+	let ballon = document.querySelector(".ballon");
+	ballon.addEventListener("click", function(){
+		handleBallon(ballon, "click");
+	});
+	ballon.addEventListener("mouseout", function(){
+		handleBallon(ballon, "mouseout");
+	});
+}
+</script>
+</body>
+</html>

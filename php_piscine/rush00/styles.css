@@ -1,0 +1,206 @@
+
+body{
+    font-family: "Bebas Neue";
+    font-size: 30pt;
+    color: white;
+    background-image: url(https://i.imgur.com/ZM4we9a.png);
+    margin: 0px;
+    border: 0px;
+  }
+
+.title{
+  font-size: 60pt;
+}
+
+.little{
+  font-size: 15pt;
+  line-height: 15px;
+}
+
+.qtd-cart {
+  background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+.anim-1{
+  animation: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #f4ea30;
+}
+
+.subhead{
+  font-size: 30pt;
+  line-height: 50px;
+}
+
+.navlink{
+  display: inline;
+  margin-right: 10%;
+}
+.admin{
+  display: inline;
+  margin-right: 10%;
+  color: #f43065;
+}
+.dropbtn {
+  font-family: "Bebas Neue";
+  color: white;
+  background-color: #8e8e8e;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  font-size: 36pt;
+  width: 220px;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: rgba(100,100,100,0.3);
+  min-width: 160px;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+  font-size: 15pt;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.topbar{
+  align-content: right;
+  display: inline-block;
+  background-color: rgba(100,100,100,0.5);
+  margin-top: 0px;
+  width: 100%;
+  height: 40px;
+  padding: 30px;
+}
+
+.box1{
+  align-content: center;
+  align-items: center;
+  width: 400px;
+  height: 250px;
+  margin-top: 20vh;
+  background-color: #f43065;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+  padding: 40px;
+}
+
+.shop{
+  position: absolute;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+}
+
+.shop.show-cart
+{
+  margin-top: 80px;
+}
+
+.item{
+  background-color: #f43065;
+  margin: 30px;
+  height: 240px;
+  width: 450px;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+}
+
+.clean-cart {
+  float: right;
+}
+
+.user{
+  background-color: #f43065;
+  padding: 25px;
+  margin: 30px;
+  height: 140px;
+  width: 450px;
+  line-height: .5;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+}
+
+.iteminfo{
+  padding-left: 25px;
+  margin-top: -40px;
+  display: inline-block;
+}
+
+.itemimage{
+  margin-left: 45px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.menu-selected{
+  color: #f43065;
+  text-decoration: underline;
+}
+
+.itemimage.cart-info {
+  margin-left: 200px !important;
+  margin-top: -120px !important;
+  display: list-item;
+}
+
+.message{
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 40px;
+}
+
+input[type=text]{
+  border: none;
+  height: 20px;
+  background-color: #f4ea30;
+
+}
+
+input[type=password]{
+  border: none;
+  height: 20px;
+  background-color: #f4ea30;
+
+}
+
+input[type=number]{
+  border: none;
+  height: 20px;
+  width: 50px;
+  background-color: #f4ea30;
+}
+.lemon{
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 600px;
+  background-color: #f43065;
+  height: 240px;
+  width: 450px;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a:hover {background-color: rgba(200,200,200,0.3);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #f43065;}
+
+
+
